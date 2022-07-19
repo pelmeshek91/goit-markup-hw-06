@@ -799,11 +799,7 @@ address {
   align-items: center;
 }
 
-.checkbox:checked+.check-label>.icon-check {
-  background-color: var(--accent-color);
-  border: none;
-}
-
+.checkbox:checked+.check-label>.icon-check,
 .checkbox:focus-within+.check-label>.icon-check {
   background-color: var(--accent-color);
   border: none;
@@ -838,7 +834,8 @@ address {
 }
 
 
-.btn-close:focus-within {
+.btn-close:focus,
+.btn-close:hover {
   fill: var(--accent-color);
 }
 
