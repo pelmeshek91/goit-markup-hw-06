@@ -730,10 +730,6 @@ address {
   transition: fill var(--transition);
 }
 
-/* .modal-form-input:hover {
-  border-color: var(--accent-color);
-  outline: none;
-} */
 .modal-form-input:focus-within,
 .input-wrap:focus-within,
 .modal-text:focus-within {
@@ -741,10 +737,6 @@ address {
   outline: none;
   fill: var(--accent-color);
 }
-
-/* .input-wrap:hover {
-  fill: var(--accent-color);
-} */
 
 .modal-form-icon {
   position: absolute;
@@ -799,11 +791,21 @@ address {
   align-items: center;
 }
 
-.checkbox:checked+.check-label>.icon-check,
-.checkbox:focus-within+.check-label>.icon-check {
+
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox:checked+.icon-check {
   background-color: var(--accent-color);
   border: none;
 }
+
+.checkbox:focus+.icon-check {
+  border-color: var(--accent-color);
+}
+
 
 .modal-form-field:nth-child(6) {
   margin-bottom: 30px;
@@ -823,6 +825,10 @@ address {
   top: 8px;
   right: 8px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   width: 30px;
   height: 30px;
 
